@@ -36,6 +36,7 @@ class OnThisDayInGaming extends Mailable
     public function build()
     {
         return $this->from(config('mail.from.address'))
+            ->cc(config('mail.from.address'))
             ->markdown('email.onthisdayingaming', [
                 'data' => $this->data,
             ]);
